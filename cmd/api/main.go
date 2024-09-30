@@ -1,9 +1,19 @@
 package main
 
+//Connect to PostgreSQL database and Redis store
+//Having structured our application, it's time
+//to connect to our database and a redis store.
+//Redis is needed for the temporary storage of tokens
+//and cookies. That is surely more performant than storing
+//them in the database.
+
+//To begin with, let's create a config type in main.go. This custom type will be made available to all our routes via another type called application by binding the routes as functions to the type. One of Go's paradigms for OOP (Object-oriented Programming):
+
 import (
 	"os"
 
-	"github.com/Iagobarros2112/goauthsysvolurya/internal/jsonlog"
+	"goauthbackend/internal/jsonlog"
+
 	"github.com/redis/go-redis/v9"
 )
 
