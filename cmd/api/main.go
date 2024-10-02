@@ -7,7 +7,11 @@ package main
 //and cookies. That is surely more performant than storing
 //them in the database.
 
-//To begin with, let's create a config type in main.go. This custom type will be made available to all our routes via another type called application by binding the routes as functions to the type. One of Go's paradigms for OOP (Object-oriented Programming):
+//To begin with, let's create a config type in main.go.
+//This custom type will be made available to all
+//our routes via another type called application by
+//binding the routes as functions to the type.
+//One of Go's paradigms for OOP (Object-oriented Programming):
 
 import (
 	"os"
@@ -20,6 +24,7 @@ import (
 const version = "1.0.0"
 
 // `config` type to house all our app's configurations
+
 type config struct {
 	port int
 	env  string
